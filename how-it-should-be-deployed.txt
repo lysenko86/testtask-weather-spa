@@ -1,0 +1,39 @@
+=== Creating a new project in Firebase
+	1) Go to Firebase console - https://console.firebase.google.com/
+	2) Add a new project, create a name of project (in my case it will be
+		"weather-SPA") and press "Next", Firebase created unique name for my project
+		automaticly (weather-spa-c5720)
+	3) We should disable Google analytics because uor project is very simple and
+		we need not in it, press "Create" and wait
+	4) Go to "Hosting" tab and press "Start"
+
+=== Install FireBase and login
+	1) Commsnd "sudo npm install -g firebase-tools"
+	2) Command "firebase login"
+	3) Web browser should open webpage with login form. Choose account and give
+		access to firebase for using this account
+
+=== Make Build of project
+	1) Command "npm run build"
+	2) This command adds new folder "build" to our project
+
+=== Configuration of deployment
+	--- In next steps you should move cursor by up and down keys, mark options by
+		space button and for next step - press Enter
+	1) Command "firebase init"
+	2) Mark only "Hosting: Configure and deploy Firebase Hosting sites" and press Enter
+	3) Choose "Use an existing project" because we have the project already
+	4) Choose project, in my case it is "weather-spa-c5720 (weather-SPA)"
+	5) Write name of folder which will be use for deploying, in our case it is "build"
+	6) Set our project like SPA and all requests will be sending to "index.html"
+	7) Choose "DON'T replace index.html", it's asking us because we have
+		"index.html" file in "build" folder already
+	8) After finish we will have 2 files:
+		- .firebaserc - it contents a name of project
+		- firebase.json - it contents a settings, what we adjusted
+
+=== Deployment
+	1) Command "firebase deploy"
+	2) After the process, we will have URL of our project in console, in my case
+		it will be https://weather-spa-c5720.web.app
+		Also our project will be access from https://weather-spa-c5720.firebaseapp.com

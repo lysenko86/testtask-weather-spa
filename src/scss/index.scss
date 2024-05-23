@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import "./spinner";
+@import "./nav-bar";
+@import "./slider";
+@import "./weather-img";
+
+.title-block {
+	background-color: #fff;
+	padding: 3px 10px;
+	border-radius: 5px;
+	border: 1px solid #000;
+}

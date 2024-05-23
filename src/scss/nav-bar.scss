@@ -1,0 +1,25 @@
+.navbar {
+	flex-wrap: nowrap;
+}
+
+.navbar-brand {
+	font-weight: bold;
+	border: 2px dashed #FFFF;
+	border-radius: 7px;
+	padding: 0.3rem 0.7rem;
+	background-color: #3285de;
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0px 0px 10px 7px;
+		border-color: #3285de;
+	}
+
+	a {
+		color: #fff;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
